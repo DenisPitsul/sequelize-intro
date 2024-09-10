@@ -128,63 +128,63 @@ const { sequelize, Student, Group } = require('./models');
 // console.log('deletedStudCount:', deletedStudCount);
 // })();
 
-(async function () {
-  // const newGroup1 = {
-  //   title: 'pe2022-1',
-  //   enteredAt: '2022-01-01',
-  // };
-  // const newGroup2 = {
-  //   title: 'pe2023-1',
-  //   enteredAt: '2023-01-01',
-  // };
-  // const createdGroup1 = await Group.create(newGroup1);
-  // const createdGroup2 = await Group.create(newGroup2);
-  // console.log(createdGroup1.get(), createdGroup2.get());
-  // const newStudent1 = {
-  //   firstName: 'Test',
-  //   lastName: 'Testovich',
-  //   email: 'm1@m.com',
-  //   groupId: 1,
-  // };
-  // const newStudent2 = {
-  //   firstName: 'Test',
-  //   lastName: 'Testovich',
-  //   email: 'm2@m.com',
-  //   groupId: 1,
-  // };
-  // const newStudent3 = {
-  //   firstName: 'Test',
-  //   lastName: 'Testovich',
-  //   email: 'm3@m.com',
-  //   groupId: 2,
-  // };
-  // const createdStudent1 = await Student.create(newStudent1);
-  // const createdStudent2 = await Student.create(newStudent2);
-  // const createdStudent3 = await Student.create(newStudent3);
-  // console.log(createdStudent1.get(), createdStudent2.get(), createdStudent3.get());
-  // Eager Loading - JOINS
-  // const foundStudentsWithGroups = await Student.findAll({
-  //   raw: true,
-  //   include: 'Group',
-  // });
-  // console.log('foundStudentsWithGroups:', foundStudentsWithGroups);
-  // const foundGroupsWithStudents = await Group.findAll({
-  //   raw: true,
-  //   include: 'Students',
-  // });
-  // console.log('foundGroupsWithStudents:', foundGroupsWithStudents);
-  // const foundGroupsWithStudents = await Group.findAll({
-  //   raw: true,
-  //   include: 'Students',
-  // });
-  // console.log('foundGroupsWithStudents:', foundGroupsWithStudents);
-  // Lazy loading - work with associations
-  // Student.belongTo => student.getGroup(), ...
-  // const student1Inst = await Student.findByPk(1);
-  // const groupOfStud1 = await student1Inst.getGroup({ raw: true });
-  // console.log('groupOfStud1:', groupOfStud1);
-  // Group.hasMany => group.getStudents(), ...
-  // const group1Inst = await Group.findByPk(1);
-  // const studOfGroup1 = await group1Inst.getStudents({ raw: true });
-  // console.log('studOfGroup1:', studOfGroup1);
-})();
+// (async function () {
+// const newGroup1 = {
+//   title: 'pe2022-1',
+//   enteredAt: '2022-01-01',
+// };
+// const newGroup2 = {
+//   title: 'pe2023-1',
+//   enteredAt: '2023-01-01',
+// };
+// const createdGroup1 = await Group.create(newGroup1);
+// const createdGroup2 = await Group.create(newGroup2);
+// console.log(createdGroup1.get(), createdGroup2.get());
+// const newStudent1 = {
+//   firstName: 'Test',
+//   lastName: 'Testovich',
+//   email: 'm1@m.com',
+//   groupId: 1,
+// };
+// const newStudent2 = {
+//   firstName: 'Test',
+//   lastName: 'Testovich',
+//   email: 'm2@m.com',
+//   groupId: 1,
+// };
+// const newStudent3 = {
+//   firstName: 'Test',
+//   lastName: 'Testovich',
+//   email: 'm3@m.com',
+//   groupId: 2,
+// };
+// const createdStudent1 = await Student.create(newStudent1);
+// const createdStudent2 = await Student.create(newStudent2);
+// const createdStudent3 = await Student.create(newStudent3);
+// console.log(createdStudent1.get(), createdStudent2.get(), createdStudent3.get());
+// Eager Loading - JOINS
+// const foundStudentsWithGroups = await Student.findAll({
+//   raw: true,
+//   include: 'Group',
+// });
+// console.log('foundStudentsWithGroups:', foundStudentsWithGroups);
+// const foundGroupsWithStudents = await Group.findAll({
+//   raw: true,
+//   include: 'Students',
+// });
+// console.log('foundGroupsWithStudents:', foundGroupsWithStudents);
+// const foundGroupsWithStudents = await Group.findAll({
+//   raw: true,
+//   include: 'Students',
+// });
+// console.log('foundGroupsWithStudents:', foundGroupsWithStudents);
+// Lazy loading - work with associations
+// Student.belongTo => student.getGroup(), ...
+// const student1Inst = await Student.findByPk(1);
+// const groupOfStud1 = await student1Inst.getGroup({ raw: true });
+// console.log('groupOfStud1:', groupOfStud1);
+// Group.hasMany => group.getStudents(), ...
+// const group1Inst = await Group.findByPk(1);
+// const studOfGroup1 = await group1Inst.getStudents({ raw: true });
+// console.log('studOfGroup1:', studOfGroup1);
+// })();

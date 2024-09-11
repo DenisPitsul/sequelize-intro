@@ -1,5 +1,11 @@
 const { Op, where } = require('sequelize');
-const { sequelize, Student, Group } = require('./models');
+const {
+  sequelize,
+  Student,
+  Group,
+  Subject,
+  StudentSubjects,
+} = require('./models');
 
 // sync db by model
 // sequelize
@@ -161,7 +167,11 @@ const { sequelize, Student, Group } = require('./models');
 // const createdStudent1 = await Student.create(newStudent1);
 // const createdStudent2 = await Student.create(newStudent2);
 // const createdStudent3 = await Student.create(newStudent3);
-// console.log(createdStudent1.get(), createdStudent2.get(), createdStudent3.get());
+// console.log(
+//   createdStudent1.get(),
+//   createdStudent2.get(),
+//   createdStudent3.get()
+// );
 // Eager Loading - JOINS
 // const foundStudentsWithGroups = await Student.findAll({
 //   raw: true,
@@ -187,4 +197,24 @@ const { sequelize, Student, Group } = require('./models');
 // const group1Inst = await Group.findByPk(1);
 // const studOfGroup1 = await group1Inst.getStudents({ raw: true });
 // console.log('studOfGroup1:', studOfGroup1);
+// const subject1 = { title: 'Data Bases', hours: 100 };
+// const subject2 = { title: 'Web-programming', hours: 150 };
+// const studSubj1 = { studentId: 1, subjectId: 1, mark: 100 };
+// const studSubj2 = { studentId: 1, subjectId: 2, mark: 90 };
+// const studSubj3 = { studentId: 2, subjectId: 1, mark: 85 };
+// const studSubj4 = { studentId: 2, subjectId: 2, mark: 88 };
+// await Subject.create(subject1);
+// await Subject.create(subject2);
+// await StudentSubjects.create(studSubj1);
+// await StudentSubjects.create(studSubj2);
+// await StudentSubjects.create(studSubj3);
+// await StudentSubjects.create(studSubj4);
+// const studentsWithSubjects = await Student.findAll({
+//   raw: true,
+//   include: Subject,
+// });
+// console.log('studentsWithSubjects :>> ', studentsWithSubjects);
+// const student1Inst = await Student.findByPk(1);
+// const subjOfStud1 = await student1Inst.getSubjects({ raw: true });
+// console.log('subjOfStud1 :>> ', subjOfStud1);
 // })();

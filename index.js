@@ -214,7 +214,7 @@ const {
 //   include: Subject,
 // });
 // console.log('studentsWithSubjects :>> ', studentsWithSubjects);
-// const student1Inst = await Student.findByPk(1);
-// const subjOfStud1 = await student1Inst.getSubjects({ raw: true });
-// console.log('subjOfStud1 :>> ', subjOfStud1);
+//   const student1Inst = await Student.findByPk(1);
+//   const subjOfStud1 = await student1Inst.getSubjects({ raw: true });
+//   console.log('subjOfStud1 :>> ', subjOfStud1);
 // })();
